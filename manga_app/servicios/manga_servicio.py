@@ -27,14 +27,14 @@ class MangaServicio:
     def agregar_manga(self, titulo, autor, genero, codigo):
 
         if codigo in self.catalogo:
-            print("⚠️ El manga ya existe")
+            print(" El manga ya existe")
             return
 
         manga = Manga(titulo, autor, genero, codigo)
 
         self.catalogo[codigo] = manga
 
-        print("✅ Manga agregado al catálogo")
+        print(" Manga agregado al catálogo")
 
     def eliminar_manga(self, codigo):
 
@@ -53,7 +53,7 @@ class MangaServicio:
     def registrar_usuario(self, nombre, id_usuario):
 
         if id_usuario in self.ids_usuarios:
-            print("⚠️ ID ya registrado")
+            print(" ID ya registrado")
             return
 
         usuario = Usuario(nombre, id_usuario)
@@ -61,7 +61,7 @@ class MangaServicio:
         self.usuarios[id_usuario] = usuario
         self.ids_usuarios.add(id_usuario)
 
-        print("✅ Usuario registrado")
+        print(" Usuario registrado")
 
     def eliminar_usuario(self, id_usuario):
 
